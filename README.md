@@ -56,7 +56,7 @@ The results/ folder stores the results and it is created by the analysis.Rda scr
 Run the requirements.R script to install all required packages, or execute:
 `source("code/requirements.R")`
 
-To install some packages (e.g., brms) directly from GitHub, you need a GitHub Personal Access Token (PAT). If installing from GitHub fails, ensure your PAT is correctly set up.
+The installation takes approximately 20 minutes. Some packages are installed from GitHub. To install these packages (e.g., brms) directly from GitHub, you need a GitHub Personal Access Token (PAT). If installing from GitHub fails, ensure your PAT is correctly set up.
 For assistance, refer to the official GitHub documentation: Creating a Personal Access Token. Brief instructions are reported here:
 
 - Log in to your GitHub account.
