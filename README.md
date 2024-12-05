@@ -51,9 +51,7 @@ The results/ folder stores the results and it is created by the analysis.Rda scr
 
 ## INSTRUCTIONS TO RUN THE ANALYSIS
 
-## Settings and requirements
-
-####  Install required packages
+####  Settings and requirements
 
 Run the requirements.R script to install all required packages, or execute:
 `source("code/requirements.R")`
@@ -82,7 +80,7 @@ For assistance, refer to the official GitHub documentation: Creating a Personal 
 - Paste the token when prompted.
 
 
-## Instructions for running the Analysis
+## Running the analysis
 
 **Run the descriptive analysis:**
 
