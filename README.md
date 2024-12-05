@@ -82,7 +82,7 @@ For assistance, refer to the official GitHub documentation: Creating a Personal 
 - Paste the token when prompted.
 
 
-## Instructions for Running the Analysis**
+## Instructions for running the Analysis
 
 **Run the descriptive analysis:**
 
@@ -110,7 +110,7 @@ NOGDP <- FALSE  # Disable the main specification
 Ensure all other parameters are set to `FALSE` unless required.
 
 
-**Run the Random Forest Analysis:**
+**Run the random forest analysis:**
 
 Execute rf.R to train random forest models and compute Shapley values.
 
@@ -118,7 +118,7 @@ Execute rf.R to train random forest models and compute Shapley values.
 
 - Outputs: Results are saved in the results/ folder, organized by script and specification.
 
-## Approximate Runtime
+## Approximate runtime
 
 - Model Training: Bayesian model training can take 24–48 hours, depending on system resources.
 - Descriptive Analysis: ~15 minutes.
