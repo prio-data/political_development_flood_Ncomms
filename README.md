@@ -6,7 +6,7 @@
 This repository contains the datasets, R scripts, and instructions to replicate the findings presented in the manuscript and supplementary materials. 
 The study explores the role of political development in mitigating the human cost of flooding using Bayesian statistical modeling.
 
-###System Requirements and Setup
+### System Requirements and Setup
 
 The analysis was run with the following system specifications: 
 
@@ -39,7 +39,7 @@ The code/ folder is structured in three main scripts:
 
 - Purpose: Trains the random forest models and computes Shapley values for feature importance, as detailed in the Supplementary Information.
 
-** Results Folder** 
+**Results Folder** 
 The results/ folder stores the results and it is created by the analysis.Rda script automatically. The results folder is organised in two main subfolders:
 
 1. descriptives: contains all descriptive figures and tables. 
@@ -119,9 +119,11 @@ Descriptive Analysis: ~15 minutes.
 Random Forest Analysis: ~2 hours.
 
 **Reproducibility**
+
 Bayesian models incorporate uncertainty estimates, leading to slight variations in results even with fixed seeds (set.seed()), particularly when using parallel processing. This is expected. 
 These minor differences do not affect the validity of the conclusions.
 
 **Support**
+
 If you encounter issues or have questions, contact P. Vesco.
 
