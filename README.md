@@ -51,7 +51,7 @@ The results/ folder stores the results and it is created by the analysis.Rda scr
 
 ## INSTRUCTIONS TO RUN THE ANALYSIS
 
-####  Settings and requirements
+## Settings and requirements
 
 Run the requirements.R script to install all required packages, or execute:
 `source("code/requirements.R")`
