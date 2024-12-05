@@ -1,5 +1,5 @@
 
-# README for Replicating Vesco et al., *"Political Development Predicts Reduced Human Cost of Flooding"*
+# Replicating Vesco et al., *"Political Development Predicts Reduced Human Cost of Flooding"*
 
 ## Overview
 
