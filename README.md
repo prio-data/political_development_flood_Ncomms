@@ -15,16 +15,18 @@ The analysis was run with the following system specifications:
 - **RStudio Version**: 2023.12.1+402
 
 
-**Repository Structure** 
+## Repository Structure
 
 
 **Data Folder**
+
 The data/ folder contains:
 
 1. data_final.rds: The main dataset used for analysis.
 2. Additional datasets for generating maps in the descriptive analysis and for conducting the counterfactual analysis.
 
-** Code Folder** 
+**Code Folder** 
+
 The code/ folder is structured in three main scripts:
 
 1. descriptives.rda:
@@ -40,52 +42,52 @@ The code/ folder is structured in three main scripts:
 - Purpose: Trains the random forest models and computes Shapley values for feature importance, as detailed in the Supplementary Information.
 
 **Results Folder** 
+
 The results/ folder stores the results and it is created by the analysis.Rda script automatically. The results folder is organised in two main subfolders:
 
 1. descriptives: contains all descriptive figures and tables. 
 2. panel: contains the results of the main analysis presented in the manuscript as well as for the sensitivity tests. It is organised in different sub-folders according to the model specification. The subfolder "nogdp" stores the results for the main specification, the other sub-folders contain the results for the sensitivity tests.
 
 
-**INSTRUCTIONS TO RUN THE ANALYSIS**
+## INSTRUCTIONS TO RUN THE ANALYSIS
 
-**Installation of Required Packages**
-Step 1: Install Dependencies
+## Settings and requirements
+
+####  Install required packages
+
 Run the requirements.R script to install all required packages, or execute:
-
-source("code/requirements.R")
-
+`source("code/requirements.R")`
 
 To install some packages (e.g., brms) directly from GitHub, you need a GitHub Personal Access Token (PAT). If installing from GitHub fails, ensure your PAT is correctly set up.
-For assistance, refer to the official GitHub documentation: Creating a Personal Access Token.
+For assistance, refer to the official GitHub documentation: Creating a Personal Access Token. Brief instructions are reported here:
+
+- Log in to your GitHub account.
+- Navigate to Personal Access Tokens.
+- Click Generate new token (classic).
+- Provide a descriptive name and select the following scopes:
+     -- repo (Full control of private repositories)
+     -- read:packages
+
+- Click Generate token and copy the token. 
+- Save it securely; you won’t be able to see it again.
+
+- Install the gitcreds package by running:
+
+`install.packages("gitcreds")`
+
+`library(gitcreds)`
+
+`gitcreds_set()`
+
+- Paste the token when prompted.
 
 
-## How to Generate a Github Token:
-
-Log in to your GitHub account.
-Navigate to Personal Access Tokens.
-Click Generate new token (classic).
-Provide a descriptive name and select the following scopes:
-repo (Full control of private repositories)
-read:packages
-
-Click Generate token and copy the token. 
-Save it securely; you won’t be able to see it again.
-
-### Setting Up the Token in R:
-Install the gitcreds package by running:
-
-install.packages("gitcreds")
-library(gitcreds)
-gitcreds_set()
-
-Paste the token when prompted.
-
-
-**Instructions for Running the Analysis**
+## Instructions for Running the Analysis**
 
 **Run the descriptive analysis:**
 
 Execute descriptives.rda to generate the descriptive statistics and figures.
+
 - How to Run: Open the script in RStudio, set the working directory to the repository root, and execute the script. Outputs are saved in the results/ folder.
 
 - Outputs include maps, correlation plots, and summary statistics.
@@ -98,10 +100,14 @@ Execute analysis.rda to replicate the main analysis and generate results.
 
 - Additional instructions:
 
-By default, the script runs with NOGDP = TRUE to produce the main results reported in the manuscript. To explore alternative model specifications as outlined in the Supplementary Information, adjust the parameters at the beginning of the script. For example:
+By default, the script runs with `NOGDP = TRUE` to produce the main results reported in the manuscript. The default setting does not re-train the model but loads the pre-trained models stored in the results folder. 
+We recommend this setting for faster compilation.
+
+To explore alternative model specifications as outlined in the Supplementary Information, adjust the parameters at the beginning of the script. For example:
 NOCHI <- TRUE  # Exclude China
 NOGDP <- FALSE  # Disable the main specification
-Ensure all other parameters are set to FALSE unless required.
+
+Ensure all other parameters are set to `FALSE` unless required.
 
 
 **Run the Random Forest Analysis:**
@@ -112,18 +118,18 @@ Execute rf.R to train random forest models and compute Shapley values.
 
 - Outputs: Results are saved in the results/ folder, organized by script and specification.
 
-**Approximate Runtime**
+## Approximate Runtime
 
-Model Training: Bayesian model training can take 24–48 hours, depending on system resources.
-Descriptive Analysis: ~15 minutes.
-Random Forest Analysis: ~2 hours.
+- Model Training: Bayesian model training can take 24–48 hours, depending on system resources.
+- Descriptive Analysis: ~15 minutes.
+- Random Forest Analysis: ~2 hours.
 
-**Reproducibility**
+## Reproducibility
 
 Bayesian models incorporate uncertainty estimates, leading to slight variations in results even with fixed seeds (set.seed()), particularly when using parallel processing. This is expected. 
 These minor differences do not affect the validity of the conclusions.
 
-**Support**
+## Support
 
 If you encounter issues or have questions, contact P. Vesco at paoves@prio.org
 
